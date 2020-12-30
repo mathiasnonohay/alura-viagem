@@ -27,6 +27,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabelaViagens.dataSource = self
+        self.tabelaViagens.delegate = self
         self.viewPacotes.layer.cornerRadius = 10
         self.viewHoteis.layer.cornerRadius = 10
     }
@@ -41,17 +42,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         
         let viagemAtual = listaViagens[indexPath.row]
+
+        cell.labelTitulo.text = viagemAtual.titulo
+        cell.labelQuantidadeDeDias.text = "\(viagemAtual.quantidadeDeDias) dias"
+        cell.labelPreco.text = "R$ \(viagemAtual.preco)"
+        cell.imagemViagem.image = UIImage(named: viagemAtual.caminhoDaImagem)
         
-        cell.textLabel?.text = viagemAtual.titulo
+        cell.imagemViagem.layer.cornerRadius = 10
+        cell.imagemViagem.layer.masksToBounds = true
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 175
+        return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone ? 175 : 260
     }
 
 }
