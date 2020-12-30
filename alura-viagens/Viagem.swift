@@ -9,5 +9,21 @@
 import UIKit
 
 class Viagem: NSObject {
-
+    
+    // MARK: - Atributos
+    
+    let titulo:String
+    let quantidadeDeDias:Int
+    let preco:String
+    let caminhoDaImagem:String
+    
+    // MARK: - Init (Constructor)
+    
+    init(titulo:String, quantidadeDeDias:Int, preco:String, caminhoDaImagem:String) {
+        self.titulo = titulo
+        self.quantidadeDeDias = quantidadeDeDias
+        self.preco = preco
+        self.caminhoDaImagem = caminhoDaImagem
+    }
+    
 }
