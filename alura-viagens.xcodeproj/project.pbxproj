@@ -10,6 +10,8 @@
 		DEB6D700259CA44900470473 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB6D6FF259CA44900470473 /* TableViewCell.swift */; };
 		DEB6D704259CA9EA00470473 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = DEB6D703259CA9EA00470473 /* Assets */; };
 		DEB6D70C259CAE6900470473 /* ViagemDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB6D70A259CAE1600470473 /* ViagemDAO.swift */; };
+		DEB6D711259CEEBF00470473 /* PacotesViagensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB6D710259CEEBF00470473 /* PacotesViagensViewController.swift */; };
+		DEB6D713259CF15300470473 /* PacoteViagemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB6D712259CF15300470473 /* PacoteViagemCollectionViewCell.swift */; };
 		DEBAD051259BA1420029D798 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBAD050259BA1420029D798 /* AppDelegate.swift */; };
 		DEBAD053259BA1420029D798 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBAD052259BA1420029D798 /* ViewController.swift */; };
 		DEBAD056259BA1420029D798 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEBAD054259BA1420029D798 /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 		DEB6D6FF259CA44900470473 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		DEB6D703259CA9EA00470473 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Assets; path = "../../../../Downloads/Arquivos Projeto/Assets"; sourceTree = "<group>"; };
 		DEB6D70A259CAE1600470473 /* ViagemDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViagemDAO.swift; sourceTree = "<group>"; };
+		DEB6D710259CEEBF00470473 /* PacotesViagensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacotesViagensViewController.swift; sourceTree = "<group>"; };
+		DEB6D712259CF15300470473 /* PacoteViagemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacoteViagemCollectionViewCell.swift; sourceTree = "<group>"; };
 		DEBAD04D259BA1420029D798 /* alura-viagens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "alura-viagens.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEBAD050259BA1420029D798 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEBAD052259BA1420029D798 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +88,31 @@
 			path = ViagemDAO;
 			sourceTree = "<group>";
 		};
+		DEB6D70D259CEE3900470473 /* Pacotes */ = {
+			isa = PBXGroup;
+			children = (
+				DEB6D70F259CEE6900470473 /* View */,
+				DEB6D70E259CEE5E00470473 /* Controller */,
+			);
+			path = Pacotes;
+			sourceTree = "<group>";
+		};
+		DEB6D70E259CEE5E00470473 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DEB6D710259CEEBF00470473 /* PacotesViagensViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DEB6D70F259CEE6900470473 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DEB6D712259CF15300470473 /* PacoteViagemCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DEBAD044259BA1420029D798 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +135,7 @@
 				DEBAD050259BA1420029D798 /* AppDelegate.swift */,
 				DEB6D705259CAD8C00470473 /* Model */,
 				DEB6D706259CADA900470473 /* Home */,
+				DEB6D70D259CEE3900470473 /* Pacotes */,
 				DEB6D709259CAE0A00470473 /* ViagemDAO */,
 				DEB6D703259CA9EA00470473 /* Assets */,
 				DEBAD054259BA1420029D798 /* Main.storyboard */,
@@ -192,6 +222,8 @@
 				DEB6D70C259CAE6900470473 /* ViagemDAO.swift in Sources */,
 				DEB6D700259CA44900470473 /* TableViewCell.swift in Sources */,
 				DEBAD063259BB43B0029D798 /* Viagem.swift in Sources */,
+				DEB6D711259CEEBF00470473 /* PacotesViagensViewController.swift in Sources */,
+				DEB6D713259CF15300470473 /* PacoteViagemCollectionViewCell.swift in Sources */,
 				DEBAD051259BA1420029D798 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
