@@ -18,8 +18,13 @@ class DetalhesViagensViewController: UIViewController {
     @IBOutlet weak var labelDataViagem: UILabel!
     @IBOutlet weak var labelPrecoPacoteViagem: UILabel!
     @IBOutlet weak var scrollPrincipal: UIScrollView!
+    @IBOutlet weak var textFieldData: UITextField!
+    
+    // MARK: - Atributos
     
     var pacoteSelecionado:PacoteViagem? = nil
+    
+    // MARK: - Métodos
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +42,30 @@ class DetalhesViagensViewController: UIViewController {
         self.scrollPrincipal.contentSize = CGSize(width: self.scrollPrincipal.frame.width, height: self.scrollPrincipal.frame.height + 320)
     }
     
+    @objc func exibeDataTextField(sender: UIDatePicker) {
+        let formatador = DateFormatter()
+        formatador.dateFormat = "dd MM yyyy"
+        self.textFieldData.text = formatador.string(from: sender.date)
+    }
+    
+    // MARK: - Action
+    
     @IBAction func botaoVoltar(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func textFieldEntrouEmFoco(_ sender: UITextField) {
+        let datePickerView = UIDatePicker()
+        datePickerView.datePickerMode = .date
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action: #selector(exibeDataTextField(sender:)), for: .valueChanged)
+    }
+    
+    @IBAction func botaoFinalizarCompra(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "confirmacaoPagamento") as! ConfirmacaoPagamentoViewController
+        controller.pacoteComprado = pacoteSelecionado
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
     
 }

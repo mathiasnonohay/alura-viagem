@@ -42,19 +42,8 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let celulaPacote = collectionView.dequeueReusableCell(withReuseIdentifier: "celulaPacote", for: indexPath) as! PacoteViagemCollectionViewCell
-        
         let pacoteAtual = listaViagens[indexPath.item]
-        
-        // Conteúdo da celula
-        celulaPacote.labelTitulo.text = pacoteAtual.viagem.titulo
-        celulaPacote.labelQuantidadeDeDias.text = "\(pacoteAtual.viagem.quantidadeDeDias) dias"
-        celulaPacote.labelPreco.text = "R$ \(pacoteAtual.viagem.preco)"
-        celulaPacote.imagemViagem.image = UIImage(named: pacoteAtual.viagem.caminhoDaImagem)
-
-        // Design da célula
-        celulaPacote.layer.borderWidth = 0.54
-        celulaPacote.layer.borderColor = UIColor(red: 85.00/255.00, green: 85.00/255.00, blue: 85.00/255.00, alpha: 1).cgColor
-        celulaPacote.layer.cornerRadius = 10
+        celulaPacote.configuraCelula(pacoteViagem: pacoteAtual)
         
         return celulaPacote
     }
@@ -70,13 +59,13 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "detalhes") as! DetalhesViagensViewController
         controller.pacoteSelecionado = pacote
-        self.present(controller, animated: true, completion: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         listaViagens = listaComTodasViagens
         if searchText != "" {
-            let filtroListaViagem = NSPredicate(format: "titulo contains %@", searchText)
+            let filtroListaViagem = NSPredicate(format: "viagem.titulo contains %@", searchText)
             let listaFiltrada:Array<PacoteViagem> = (listaViagens as NSArray).filtered(using: filtroListaViagem) as! Array
             listaViagens = listaFiltrada
         }

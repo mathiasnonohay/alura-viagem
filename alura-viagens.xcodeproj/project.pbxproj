@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE47264825A3531800694D4E /* ConfirmacaoPagamentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE47264725A3531800694D4E /* ConfirmacaoPagamentoViewController.swift */; };
 		DEA6D89D25A23BE9006337CD /* DetalhesViagensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA6D89C25A23BE9006337CD /* DetalhesViagensViewController.swift */; };
 		DEA6D89F25A26777006337CD /* PacoteViagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA6D89E25A26777006337CD /* PacoteViagem.swift */; };
 		DEA6D8A125A269A8006337CD /* PacoteViagemDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA6D8A025A269A8006337CD /* PacoteViagemDAO.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE47264725A3531800694D4E /* ConfirmacaoPagamentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmacaoPagamentoViewController.swift; sourceTree = "<group>"; };
 		DEA6D89C25A23BE9006337CD /* DetalhesViagensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesViagensViewController.swift; sourceTree = "<group>"; };
 		DEA6D89E25A26777006337CD /* PacoteViagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacoteViagem.swift; sourceTree = "<group>"; };
 		DEA6D8A025A269A8006337CD /* PacoteViagemDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacoteViagemDAO.swift; sourceTree = "<group>"; };
@@ -85,6 +87,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE47264525A352DF00694D4E /* ConfirmacaoPagamento */ = {
+			isa = PBXGroup;
+			children = (
+				DE47264625A352F800694D4E /* Controller */,
+			);
+			path = ConfirmacaoPagamento;
+			sourceTree = "<group>";
+		};
+		DE47264625A352F800694D4E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DE47264725A3531800694D4E /* ConfirmacaoPagamentoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		DEA6D89925A21E48006337CD /* DetalhesViagem */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +243,7 @@
 				DEB6D706259CADA900470473 /* Home */,
 				DEB6D70D259CEE3900470473 /* Pacotes */,
 				DEA6D89925A21E48006337CD /* DetalhesViagem */,
+				DE47264525A352DF00694D4E /* ConfirmacaoPagamento */,
 				DEB6D709259CAE0A00470473 /* ViagemDAO */,
 				DEBAD054259BA1420029D798 /* Main.storyboard */,
 				DEA6D8A225A269D7006337CD /* Assets */,
@@ -330,6 +349,7 @@
 				DEA6D89D25A23BE9006337CD /* DetalhesViagensViewController.swift in Sources */,
 				DEA6D8A125A269A8006337CD /* PacoteViagemDAO.swift in Sources */,
 				DEB6D711259CEEBF00470473 /* PacotesViagensViewController.swift in Sources */,
+				DE47264825A3531800694D4E /* ConfirmacaoPagamentoViewController.swift in Sources */,
 				DEB6D713259CF15300470473 /* PacoteViagemCollectionViewCell.swift in Sources */,
 				DEBAD051259BA1420029D798 /* AppDelegate.swift in Sources */,
 				DEA6D89F25A26777006337CD /* PacoteViagem.swift in Sources */,
